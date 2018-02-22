@@ -1,0 +1,30 @@
+<div class="just-title" @click="seenMutated = !seenMutated">
+  <!--
+  элементы, которые нужно подвергать анимации,
+  обворачиваем в псеводо-тэг transition
+  -->
+  <transition name="fade" mode="out-in">
+    <!--
+    анимация не будет работать без заданного аттрибута key
+    -->
+    <div :key="seenMutated">
+      {{seenMutated ? seenTrue : seenFalse}}
+    </div>
+  </transition>
+
+  <!--
+  если нужно отображать/показывать сразу
+  несколько элементов без обёртки,
+  оборачиваем их в псевдотэг template.
+  если у компонента отсутствует рут-тэг,
+  то vue сообщит об ошибке.
+  чтобы этого избежать,
+  оборачиваем всё содержимое компонента в пустой div
+   -->
+  <template v-if="seenMutated">
+    <div>А здесь просто куча элементов в специальной обёртке template</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </template>
+</div>

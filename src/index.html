@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <ol v-if="seen">
+    <todo-item
+      v-for="(item, index) in todos"
+      :text="item.text"
+      :key="`${index}`">
+    </todo-item>
+  </ol>
+  <div>Сообщение: {{msg}}</div>
+  <div>Сообщение реверс: {{reverseMsg}}</div>
+  <just-title :seen="seen"></just-title>
+</div>
+</body>
+</html>
