@@ -1,5 +1,5 @@
 <div class="index">
-  <ul v-if="seen">
+  <ul class="todo-items-wrapper" v-if="seen">
     <!--
     аттрибут is нужен для
     ситуаций, когда только особый тэг
@@ -23,5 +23,9 @@
   <!--
   <just-title :seen="seen"></just-title>
   -->
-  <div @click="addTodo()">Добавить todo</div>
+  <input
+    v-model="newTodo"
+    @keyup.enter="addTodo()"
+    placeholder="Добавить новую todo"
+  />
 </div>

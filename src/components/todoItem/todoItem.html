@@ -1,3 +1,4 @@
-<li @click="reverseMsg()">
-  <div>{{ mutableText }}</div>
+<li class="todo-item" @click="reverseMsg()">
+  <div class="todo-item__text">{{ mutableText }}</div>
+  <button class="todo-item__close" @click="removeTodo(index)">x</button>
 </li>

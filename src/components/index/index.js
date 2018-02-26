@@ -6,6 +6,7 @@ Vue.component('index', {
         return {
             msg: `Вы загрузили эту страницу в: ${new Date().toLocaleString()}`,
             seen: true,
+            newTodo: '',
             todos: [
                 {text: 'Посадить дерево'},
                 {text: 'Построить дом'},
@@ -25,8 +26,14 @@ Vue.component('index', {
 
         addTodo() {
             this.todos.push({
-                text: 'Ещё одна todo'
-            })
+                text: this.newTodo
+            });
+
+            this.newTodo = '';
+        },
+
+        removeTodo(index) {
+            this.todos.splice(index, 1)
         }
     }
 });
