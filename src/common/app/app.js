@@ -1,3 +1,7 @@
+import Vue from 'vue';
 import './app.routes.js';
-import './app.filters-custom';
-import 'components/components.js';
+import 'components/components';
+
+const vm = window.vm = new Vue({
+    el: '#app'
+});

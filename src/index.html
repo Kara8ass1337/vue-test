@@ -6,16 +6,7 @@
 </head>
 <body>
 <div id="app">
-  <ol v-if="seen">
-    <todo-item
-      v-for="(item, index) in todos"
-      :text="item.text"
-      :key="`${index}`">
-    </todo-item>
-  </ol>
-  <div>Сообщение: {{msg}}</div>
-  <div>Сообщение реверс: {{reverseMsg}}</div>
-  <just-title :seen="seen"></just-title>
+  <index></index>
 </div>
 </body>
 </html>
