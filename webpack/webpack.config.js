@@ -7,6 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const argv = require('yargs').argv;
+const rootPath = resolve(__dirname, '../');
 
 const extractStyles = new ExtractTextPlugin({
     filename: '[name].css',
@@ -34,13 +35,19 @@ const stylesLoadersChunk = ({test, loader, options} = {}) => {
             }, {
                 loader,
                 options
+            }, {
+                loader: 'prepend-style-loader',
+                options: {
+                    prepend: [
+                        `${rootPath}/src/common/styles/mixins.styl`,
+                        `${rootPath}/src/common/styles/animations.styl`,
+                    ]
+                }
             }],
             fallback: 'style-loader'
         })
     }
 };
-
-const rootPath = resolve(__dirname, '../');
 
 module.exports = {
     devtool: 'source-map',
