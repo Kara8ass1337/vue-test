@@ -70,6 +70,7 @@
     "postcss": "^6.0.13",
     "postcss-loader": "^2.0.6",
     "postcss-reporter": "^5.0.0",
+    "prepend-style-loader": "^2.0.0",
     "raw-loader": "^0.5.1",
     "renderkid": "^2.0.1",
     "sass-loader": "^6.0.6",

@@ -1,4 +1,5 @@
 <div class="index">
+  <vue-title title="aaaa"></vue-title>
   <ul class="todo-items-wrapper" v-if="seen">
     <!--
     аттрибут is нужен для
@@ -23,9 +24,17 @@
   <!--
   <just-title :seen="seen"></just-title>
   -->
-  <input
-    v-model="newTodo"
-    @keyup.enter="addTodo()"
-    placeholder="Добавить новую todo"
-  />
+  <div class="todo-item__add">
+    <input
+      v-model="newTodo"
+      @keyup.enter="addTodo()"
+      placeholder="Что нужно сделать"
+    />
+    <a href="#test" @click.prevent="addTodo()">Добавить</a>
+  </div>
+
+  <test-on-postfix></test-on-postfix>
+
+  <textarea-test></textarea-test>
+  <checkbox></checkbox>
 </div>

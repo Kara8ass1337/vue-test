@@ -1,8 +1,11 @@
 import Vue from 'vue';
 import './justTitle.styl';
 
-Vue.component('justTitle', {
-    props: ['seen'],
+Vue.component('just-title', {
+    props: {
+        'seen': String,
+        required: true
+    },
     template: require('./justTitle.html'),
     data() {
         return {

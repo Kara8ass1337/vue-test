@@ -1,14 +1,17 @@
 import Vue from 'vue';
 import './todoItem.styl';
 
-Vue.component('todoItem', {
-    props: ['text'],
+Vue.component('todo-item', {
+    props: {
+        'text': String,
+        required: true
+    },
     template: require('./todoItem.html'),
     data() {
         return {
             /**
-             * mutableText вместо text из-за принципа неизменяемости входных данных,
-             * чтобы мы могли всегда обратиться к исходным данным
+             * mutableText вместо text,
+             * чтобы был однонаправленный поток данных
              */
             //mutableText: this.$parent.reverse(this.text)
             mutableText: this.text,

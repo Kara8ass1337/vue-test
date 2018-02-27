@@ -66,7 +66,7 @@ module.exports = {
         extractStyles,
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            template: `${rootPath}/src/index.html`
+            template: `${rootPath}/src/htmlRoot.html`
         }),
         new CopyWebpackPlugin([{
             from: `${rootPath}/public/`,
