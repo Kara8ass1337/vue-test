@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import {bus} from 'components/bus/bus';
+import {globalBus} from 'components/globalBus/globalBus';
 
 Vue.component('checkbox', {
     props: {
@@ -14,7 +14,7 @@ Vue.component('checkbox', {
     template: require('./checkbox.html'),
     methods: {
         changeEmit() {
-            bus.$emit('stateChanged', this.stateMutable);
+            globalBus.$emit('stateChanged', this.stateMutable);
         }
     }
 });

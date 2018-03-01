@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import {bus} from 'components/bus/bus';
+import {globalBus} from 'components/globalBus/globalBus';
 
 Vue.component('textarea-test', {
     template: require('./textarea.html'),
@@ -12,7 +12,7 @@ Vue.component('textarea-test', {
         /**
          * @param state {bool}
          */
-        bus.$on('stateChanged', (state) => {
+        globalBus.$on('stateChanged', (state) => {
             this.text = state;
         });
     }
