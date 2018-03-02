@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-Vue.component('vue-title', {
+Vue.component('page-title', {
     props: {
         'title': String,
         required: true

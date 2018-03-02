@@ -1,5 +1,4 @@
-<div class="index">
-  <vue-title title="aaaa"></vue-title>
+<div class="index" v-page-title="'page-title'">
   <ul class="todo-items-wrapper" v-if="seen">
     <!--
     аттрибут is нужен для
@@ -35,4 +34,8 @@
 
   <test-mixin-first></test-mixin-first>
   <test-mixin-second></test-mixin-second>
+
+  <audio controls v-console-fired-event="'play'">
+    <source src="audio/guitar_train_spark.mp3" type="audio/mp3" />
+  </audio>
 </div>
