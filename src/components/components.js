@@ -1,4 +1,5 @@
 import './title/title';
+import './main-menu/main-menu';
 import './index/index';
 import './about/about';
 import './todoItem/todoItem';

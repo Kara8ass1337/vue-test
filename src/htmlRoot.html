@@ -6,9 +6,9 @@
 </head>
 <body>
 <div id="app">
-  <router-link to="/">Go to Index</router-link>
-  <router-link to="/about">Go to About</router-link>
-  <router-view></router-view>
+  <transition name="fade" mode="out-in">
+    <router-view key="router-view"></router-view>
+  </transition>
 </div>
 </body>
 </html>

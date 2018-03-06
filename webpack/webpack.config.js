@@ -128,7 +128,7 @@ module.exports = {
         publicPath: '/',
         historyApiFallback: {
             rewrites: [
-                {from: /./, to: '/err-404.html'}
+                {from: /./, to: '/'}
             ]
         },
         hot: true
