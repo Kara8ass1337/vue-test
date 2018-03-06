@@ -3,7 +3,7 @@ import './index.styl';
 import {testOnPostfix} from './testOnPostfix/testOnPostfix';
 import {inputText} from './inputText/inputText';
 
-Vue.component('index', {
+export const index = Vue.component('index', {
     template: require('./index.html'),
     /**
      * в components определяем

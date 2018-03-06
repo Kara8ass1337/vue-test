@@ -1,8 +1,11 @@
 import Vue from 'vue';
-import './app.routes.js';
+import VueRouter from 'vue-router';
 import 'components/components';
 import 'directives/directives';
+import {router} from './app.routes.js';
+
+Vue.use(VueRouter);
 
 const vm = window.vm = new Vue({
-    el: '#app'
-});
+    router
+}).$mount('#app');

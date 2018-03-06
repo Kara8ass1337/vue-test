@@ -38,4 +38,22 @@
   <audio controls v-console-fired-event="'play'">
     <source src="audio/guitar_train_spark.mp3" type="audio/mp3" />
   </audio>
+
+  <div class="component-slot-parent">
+    <h1>Заголовок компонента-родителя</h1>
+    <slot-component>
+      <h1 slot="header">Переданный заголовок</h1>
+      <!--
+      директиву slot-scope можно писать в любом тэге,
+      но тэг template автоматически распахнётся.
+      slot-scope - это slot с изолированным пространством,
+      чтобы в него что-то передать - указываем переданные
+      значения в slot, в компоненте где он определяется.
+       -->
+      <template slot-scope="props">
+        <span>{{props.text}}</span>
+      </template>
+      <p slot="footer">Подвальчик</p>
+    </slot-component>
+  </div>
 </div>
