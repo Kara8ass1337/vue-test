@@ -9,3 +9,4 @@ import './checkbox/checkbox';
 import './testMixinFirst/testMixinFirst';
 import './testMixinSecond/testMixinSecond';
 import './slotComponent/slotComponent';
+import './counter/counter';

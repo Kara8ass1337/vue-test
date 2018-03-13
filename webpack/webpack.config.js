@@ -117,7 +117,7 @@ module.exports = {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|eot|ttf)$/,
                 use: 'file-loader?name=[name].[ext]&outputPath=./assets/'
             }, {
-                test: /\.html$/,
+                test: /\.html$/, //todo: vue-template-loader
                 use: 'raw-loader'
             }]
     },
